@@ -1,6 +1,6 @@
 import React from 'react'
 import './chart.scss'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Area, AreaChart, ResponsiveContainer } from 'recharts';
+import {  XAxis, CartesianGrid, Tooltip, Area, AreaChart, ResponsiveContainer } from 'recharts';
 
 
 const data = [

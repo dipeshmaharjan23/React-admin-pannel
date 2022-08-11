@@ -5,15 +5,30 @@
         // background-color: lightblue;
         flex: 6;
 
-        .widgets,.charts{
+        .widgets,
+        .charts {
             display: flex;
-            padding: 20px;    
+            padding: 20px;
             gap: 20px;
             // border: 1px solid;
         }
 
-        .charts{
+        .charts {
             padding: 5px 20px;
+        }
+
+        .listContainer {
+            box-shadow: 2px 2px 5px 0px rgba(51, 51, 51, 0.4);
+            -webkit-box-shadow: 2px 2px 5px 0px rgba(51, 51, 51, 0.4);
+            -moz-box-shadow: 2px 2px 5px 0px rgba(51, 51, 51, 0.4);
+            padding: 20px;
+            margin: 20px;
+
+            .listTitle{
+                font-weight: 500;
+                color: gray;
+                margin-bottom: 15px;
+            }
         }
 
 
