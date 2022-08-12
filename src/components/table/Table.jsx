@@ -7,20 +7,53 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import image from '../../assets/hplaptop.jpg';
 
 const Tables = () => {
  
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: 108 },
-  { id: 6, lastName: 'Melisandre', firstName: 'Elis', age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+  {
+    id:1111,
+    product : 'Dell laptop' ,
+    // img : require('../../assets/hplaptop.jpg') ,
+    img : image,
+    customer : 'ramesh',
+    date : '1 january',
+    amount : 100,
+    method : 'Cash on Delivery',
+    status : "Pending",
+  } ,
+  {
+    id:1121,
+    product : 'Hp laptop' ,
+    img:image,
+    customer : 'suresh',
+    date : '1 january',
+    amount : 100,
+    method : 'Cash on Delivery',
+    status : "Approved",
+  },
+   {
+    id:1231,
+    product : 'Samsung laptop' ,
+    img:image,
+    customer : 'jarosj',
+    date : '1 january',
+    amount : 100,
+    method : 'Cash on Delivery',
+    status : "Pending",
+  }, {
+    id:4111,
+    product : 'Apple laptop' ,
+    img:image,
+    customer : 'harish',
+    date : '1 january',
+    amount : 100,
+    method : 'Online Payment',
+    status : "Approved",
+  }
+]
+
   
   return (
     <TableContainer component={Paper} className="table">
@@ -28,10 +61,12 @@ const rows = [
       <TableHead>
         <TableRow>
           <TableCell>ID</TableCell>
-          <TableCell align="right">First Name</TableCell>
-          <TableCell align="right">Second Name</TableCell>
-          <TableCell align="right">Age</TableCell>
-          <TableCell align="right">Full Name</TableCell>
+          <TableCell className='tablecell'>Product</TableCell>
+          <TableCell className='tablecell'>Customer</TableCell>
+          <TableCell className='tablecell'>Date</TableCell>
+          <TableCell className='tablecell'>Amount</TableCell>
+          <TableCell className='tablecell'>Payment Method</TableCell>
+          <TableCell className='tablecell'>Status</TableCell>
         </TableRow>
       </TableHead>
       <TableBody>
@@ -39,13 +74,22 @@ const rows = [
           <TableRow
             key={row.id}
           >
-            <TableCell component="th" scope="row">
+            <TableCell >
               {row.id}
             </TableCell>
-            <TableCell align="right">{row.firstName}</TableCell>
-            <TableCell align="right">{row.lastName}</TableCell>
-            <TableCell align="right">{row.age}</TableCell>
-            <TableCell align="right">{row.firstName} {row.lastName}</TableCell>
+            <TableCell className='tablecell'>
+                <div className="cellWrapper">
+                  <img src={row.img} alt="product " />
+                  {row.product}
+                </div>
+              </TableCell>
+            <TableCell className='tablecell'>{row.customer}</TableCell>
+            <TableCell className='tablecell'>{row.date}</TableCell>
+            <TableCell className='tablecell'>{row.amount}</TableCell>
+            <TableCell className='tablecell'>{row.method}</TableCell>
+            <TableCell className='tablecell'>
+              <span className={`status ${row.status}`}>{row.status}</span>
+              </TableCell>
           </TableRow>
         ))}
       </TableBody>

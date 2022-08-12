@@ -37,7 +37,7 @@ const Navbar = () => {
             <TocOutlinedIcon className='icon' />
           </div>
           <div className="item">
-            <img src="../../assets/mine.jpg" alt="mine" className='photo'/>
+            <img src={require("../../assets/mine.jpg")} alt="mine" className='photo'/>
           </div>
 
         </div>
