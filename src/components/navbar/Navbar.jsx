@@ -1,13 +1,16 @@
 import React from 'react'
 import './navbar.scss'
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import FullscreenOutlinedIcon from '@mui/icons-material/FullscreenOutlined';
 import TocOutlinedIcon from '@mui/icons-material/TocOutlined';
+import { useContext } from 'react';
+import { DarkModeContext } from '../context/darkModeContext';
 
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext)
+
   return (
     <div className='navbar'>
       <div className="wrapper">
@@ -20,7 +23,7 @@ const Navbar = () => {
         <div className="items">
 
           <div className="item">
-            <DarkModeIcon className='icon' />
+            <DarkModeOutlinedIcon className='icon' onClick={() => dispatch({ type: "Toggle" })}/>
           </div>
           <div className="item">
             <NotificationsNoneIcon className='icon' />
