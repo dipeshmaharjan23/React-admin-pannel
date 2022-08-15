@@ -60,7 +60,7 @@ const rows = [
     <Table sx={{ minWidth: 650 }} aria-label="simple table">
       <TableHead>
         <TableRow>
-          <TableCell>ID</TableCell>
+          <TableCell className='tablecell'>ID</TableCell>
           <TableCell className='tablecell'>Product</TableCell>
           <TableCell className='tablecell'>Customer</TableCell>
           <TableCell className='tablecell'>Date</TableCell>
@@ -74,7 +74,7 @@ const rows = [
           <TableRow
             key={row.id}
           >
-            <TableCell >
+            <TableCell className='tablecell'>
               {row.id}
             </TableCell>
             <TableCell className='tablecell'>

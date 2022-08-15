@@ -18,12 +18,12 @@
         border-radius: 5px;
 
         &.Approved{
-            background-color: rgba(17, 150, 17, 0.5);
+            background-color:rgb(8 88 8 / 50%);
             color:green;
         }
 
         &.Pending{
-            background-color: rgba(120, 161, 37, 0.3);
+            background-color: rgba(120, 161, 37, 0.5);
             color: rgb(219, 161, 14);
         }
     }
