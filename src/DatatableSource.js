@@ -62,5 +62,21 @@ export const userRow = [
         status: "active",
         email: "Cerrsie.2022@gmail.com",
         age: 28,
+    },
+    {
+        id: 5,
+        username: "Cerrsie Lannister",
+        img: require('./assets/mine.jpg'),
+        status: "active",
+        email: "Cerrsie.2022@gmail.com",
+        age: 28,
+    },
+    {
+        id: 6,
+        username: "Cerrsie Lannister",
+        img: require('./assets/mine.jpg'),
+        status: "active",
+        email: "Cerrsie.2022@gmail.com",
+        age: 28,
     }
 ]
